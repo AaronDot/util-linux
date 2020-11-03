@@ -17,7 +17,7 @@ int lookup(char *line, char *pattern, char **value)
 	if (!*line || *value)
 		return 0;
 	/* pattern */
-	if (strncmp(line, pattern, len))
+	if (strncmp(line, pattern, len) != 0)
 		return 0;
 	/* white spaces */
 	for (p = line + len; isspace(*p); p++);

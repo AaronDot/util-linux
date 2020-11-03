@@ -209,7 +209,7 @@ static void arm_decode(struct lscpu_cputype *ct)
 
 	if (ct->vendor == NULL || ct->model == NULL)
 		return;
-	if ((strncmp(ct->vendor,"0x",2) || strncmp(ct->model,"0x",2) ))
+	if ((strncmp(ct->vendor,"0x",2) != 0 || strncmp(ct->model,"0x",2) != 0))
 		return;
 
 	errno = 0;
